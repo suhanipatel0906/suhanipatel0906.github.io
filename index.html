@@ -172,7 +172,9 @@
     .exp-period { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .06em; }
     .exp-company { font-weight: 600; color: var(--text); margin: 6px 0 4px; font-size: 14px; }
     .exp-loc { font-family: var(--mono); font-size: 11px; color: var(--accent2); }
+    .exp-team { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin-top: 8px; line-height: 1.6; }
     .exp-role { font-family: var(--serif); font-size: 1.4rem; color: var(--text); margin-bottom: 16px; }
+    .exp-tech { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 18px; line-height: 1.6; }
     .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .exp-bullets li {
       color: var(--muted); font-size: 14px; padding-left: 20px; position: relative; line-height: 1.7;
@@ -216,7 +218,20 @@
     }
     .edu-degree { font-family: var(--serif); font-size: 1.2rem; color: var(--text); }
     .edu-school { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .edu-detail { color: var(--muted); font-size: 12.5px; margin-top: 8px; line-height: 1.6; max-width: 640px; }
     .edu-year { font-family: var(--mono); font-size: 12px; color: var(--accent); text-align: right; }
+
+    /* ── AWARDS ── */
+    .awards-list { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+    .award-item {
+      display: flex; align-items: baseline; gap: 16px;
+      padding: 20px 28px; background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .award-icon { font-size: 1.3rem; }
+    .award-title { font-family: var(--serif); font-size: 1.1rem; color: var(--text); }
+    .award-org { font-family: var(--mono); font-size: 11px; color: var(--accent3); margin-top: 2px; }
+    .award-desc { color: var(--muted); font-size: 13px; margin-top: 6px; }
 
     /* ── CONTACT ── */
     #contact {
@@ -280,9 +295,9 @@
       <div>
           <div class="hero-tag">Available for opportunities</div>
           <h1>Suhani Patel</h1>
-          <p class="hero-role">Software Engineer (Full‑Stack + .NET + AI Integration)</p>
+          <p class="hero-role">Full-Stack Engineer (.NET | AI Integration)</p>
           <p class="hero-desc">
-             7+ years delivering scalable SaaS platforms using .NET Core, Blazor, React, and Next.js — with strong Clean Architecture, Dependency Injection, and AI/LLM integration (GPT, OCR, automation). Experienced with cloud storage and media handling using AWS S3.
+             7+ years delivering production SaaS platforms across education, automotive, and simulation domains using .NET Core, C#, Azure/AWS, Blazor, and React. Led the architecture of a GPT-4 Vision document-reading pipeline for a live university admissions workflow, cutting manual review by 70%. Usually works in small full-stack teams, owning features end-to-end from API design through to the final UI.
           </p>
           <div class="hero-btns">
               <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -296,8 +311,8 @@
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">15+</span>
-        <span class="stat-label">SaaS platforms delivered</span>
+        <span class="stat-num">14</span>
+        <span class="stat-label">client platforms delivered</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
@@ -323,6 +338,8 @@
           <span class="tag">SignalR</span><span class="tag">LINQ</span><span class="tag">ADO.NET</span>
           <span class="tag">Clean Architecture</span>
           <span class="tag">Dependency Injection</span>
+          <span class="tag">SOLID Principles</span>
+          <span class="tag">Event-Driven Architecture</span>
       </div>
     </div>
     <div class="skill-card fade-in">
@@ -333,23 +350,24 @@
         <span class="tag">Next.js</span><span class="tag">TypeScript</span>
         <span class="tag">Angular</span><span class="tag">HTML5</span>
         <span class="tag">CSS3</span><span class="tag">Bootstrap</span>
+        <span class="tag">Tailwind CSS</span>
       </div>
     </div>
     <div class="skill-card fade-in">
       <div class="skill-card-icon">🤖</div>
       <div class="skill-card-title">AI &amp; Automation</div>
       <div class="skill-tags">
-        <span class="tag">OpenAI API</span><span class="tag">GPT Models</span>
-        <span class="tag">LLM Integration</span><span class="tag">OCR</span>
+        <span class="tag">OpenAI GPT-4 Vision</span><span class="tag">DALL·E</span>
+        <span class="tag">LLM Integration</span><span class="tag">Document Intelligence</span>
         <span class="tag">Prompt Engineering</span>
-        <span class="tag">Trigger.dev</span><span class="tag">Event-Driven</span>
+        <span class="tag">GitHub Copilot Agent</span><span class="tag">Workflow Automation</span>
       </div>
     </div>
     <div class="skill-card fade-in">
       <div class="skill-card-icon">☁️</div>
       <div class="skill-card-title">Cloud &amp; DevOps</div>
       <div class="skill-tags">
-          <span class="tag">Azure</span> <span class="tag">Azure Scheduler</span><span class="tag">AWS</span>
+          <span class="tag">Azure</span><span class="tag">Azure Scheduler</span><span class="tag">AWS S3</span>
           <span class="tag">CI/CD</span><span class="tag">GitHub Actions</span><span class="tag">Vercel</span>
       </div>
     </div>
@@ -363,11 +381,12 @@
     </div>
     <div class="skill-card fade-in">
       <div class="skill-card-icon">🔐</div>
-      <div class="skill-card-title">APIs &amp; Security</div>
+      <div class="skill-card-title">APIs, Security &amp; Testing</div>
       <div class="skill-tags">
         <span class="tag">REST APIs</span><span class="tag">JWT</span>
         <span class="tag">OAuth</span><span class="tag">reCAPTCHA v3</span>
         <span class="tag">TDD</span><span class="tag">xUnit</span><span class="tag">NUnit</span>
+        <span class="tag">Agile/Scrum</span><span class="tag">JIRA</span>
       </div>
     </div>
   </div>
@@ -384,17 +403,23 @@
         <div class="exp-period">Sep 2024 — Apr 2026</div>
         <div class="exp-company">Magic Square Systems Ltd</div>
         <div class="exp-loc">United Kingdom · Hybrid</div>
+        <div class="exp-team">2–3 person delivery team — independently owned several features end-to-end</div>
       </div>
       <div>
-        <div class="exp-role">Software Developer (Contract)</div>
+        <div class="exp-role">Software Engineer (Contract)</div>
+        <div class="exp-tech">.NET Core · C# · Web API · EF Core · SQL Server · Azure · AWS S3 · Blazor · React · Next.js · GPT-4 Vision · DALL·E · SignalR</div>
         <ul class="exp-bullets">
-          <li>Delivered full-lifecycle development across <strong>15+ SaaS platforms</strong> for UK clients in higher education, healthcare simulation, media, and automotive sectors.</li>
-          <li class="exp-highlight">Built an AI-powered document processing pipeline using OpenAI GPT + OCR, reducing manual data entry by 70% at Coventry University PGR+.</li>
-          <li>Developed a SQL-triggered WhatsApp notification workflow using Copilot Agent, fully automating manual communication steps.</li>
-          <li class="exp-highlight">Designed a QR-based onboarding &amp; cabin allocation engine for The Simulation Centre — reducing check-in time by 40–60% and eliminating allocation errors.</li>
-          <li>Led phased migration of Predict Media Sim from ASP.NET MVC to .NET Core with zero disruption to live users.</li>
-          <li>Replaced legacy CSV/FTPS ingestion with direct Autotrader Retailer API integration for real-time stock sync across four brands.</li>
-          <li>Implemented client-side image cropping &amp; compression, reducing upload sizes by up to 50%.</li>
+          <li class="exp-highlight">Built two GPT-4 Vision document extraction pipelines for Coventry University's PGR+ research portal — one reads passports to auto-fill nationality, the other reads transcripts to pull course title, dates, and grade. Both fall back to manual entry when extraction fails, cutting manual review for international applicants by 70%.</li>
+          <li>Replaced a legacy FTPS/CSV stock feed with a token-authenticated Autotrader API integration across four dealership brands (Midlands Truck &amp; Van, Bell Truck &amp; Van, Used Vans 4U, Used Trucks 4U), syncing vehicle stock in real time.</li>
+          <li>Migrated Predict Media from ASP.NET MVC to .NET Core by embedding Blazor components directly into the live application — keeping the existing database, sessions, cookies, and authentication intact for zero downtime and zero user disruption.</li>
+          <li>Built a centralized notification/activity-logging service, injected via Dependency Injection for consistent use across the platform.</li>
+          <li class="exp-highlight">Built an AI bot system for Predict Media's social platform — bots get a DALL·E-generated profile picture matched to a chosen region, then post, like, comment, and repost in-character on a schedule. Operators monitor and moderate everything from a "My Social Posts" dashboard.</li>
+          <li>Added a scheduled job that checks bot status every 10 minutes so operators don't have to check manually.</li>
+          <li>Built a QR-code check-in flow for The Simulation Centre that auto-allocates delegates to cabins on scan, cutting check-in time by 40–60% and eliminating allocation errors.</li>
+          <li>Rolled out Google reCAPTCHA v3 and bot-prevention checks across multiple client forms; added client-side image cropping and compression for Predict Media, cutting upload sizes by up to 50%.</li>
+          <li>Implemented AWS S3 storage for secure media upload, retrieval, and lifecycle management across client platforms.</li>
+          <li>Prototyped an automated WhatsApp notification workflow using GitHub Copilot agent mode — a SQL Server trigger fires on new record insertion, looks up the assigned user, and sends a real-time alert via the Twilio API.</li>
+          <li>Delivered features across 14 client platforms spanning education, automotive, and simulation sectors — including CU Ethics, OMIS Future Travel, HOPE, and CES Portal.</li>
         </ul>
       </div>
     </div>
@@ -407,13 +432,14 @@
       </div>
       <div>
         <div class="exp-role">Software Developer</div>
+        <div class="exp-tech">.NET Framework · C# · Angular · SQL Server · Azure · ADO.NET · LINQ · Web API</div>
         <ul class="exp-bullets">
-  <li>Developed enterprise applications using .NET Framework, Angular, SQL Server, and Azure services.</li>
-  <li>Delivered multiple production .NET applications including Procure Safe, Atlica, Benchmark Broker System, and Dhivar Samaj.</li>
-  <li>Optimised stored procedures and built RESTful Web APIs, reducing bug reports by 25%.</li>
-  <li>Performed unit testing (xUnit, NUnit) and modularised legacy codebases to modern standards.</li>
-  <li>Mentored junior developers and conducted code reviews, improving team productivity and reducing onboarding time.</li>
-</ul>
+          <li class="exp-highlight">Built the contract expiry notification system for Benchmark Broker System — an Azure-scheduled job runs daily checks each morning and automatically emails customers at their chosen notice period (30, 60, or 90 days) before contract expiry.</li>
+          <li>Developed and maintained enterprise web applications for external clients — including Procure Safe, Atlica, and Dhivar Samaj — working largely independently across the full stack.</li>
+          <li>Optimised stored procedures and data access layers, reducing recurring data-access bugs and improving application reliability.</li>
+          <li>Refactored and modularised legacy codebases, improving long-term maintainability and easing onboarding for new developers.</li>
+          <li>Mentored junior developers and wrote unit tests using xUnit and NUnit, improving reliability and reducing regressions.</li>
+        </ul>
       </div>
     </div>
 
@@ -425,10 +451,12 @@
       </div>
       <div>
         <div class="exp-role">Junior Software Developer</div>
+        <div class="exp-tech">ASP.NET MVC · C# · SQL Server · ADO.NET · LINQ · jQuery · AJAX</div>
         <ul class="exp-bullets">
-          <li>Built ASP.NET MVC applications in 3-tier architecture, reducing manual HR effort by 30% and improving performance by 20%.</li>
-          <li>Designed RESTful API interfaces and implemented ADO.NET/LINQ for SQL Server interactions.</li>
-          <li>Achieved a 25% reduction in bug reports through systematic debugging and code reviews.</li>
+          <li>Built DPRS, an internal tool for developers to log daily task activity — project, task, difficulty, and status — giving managers visibility into team workload without manual check-ins.</li>
+          <li>Built ASP.NET MVC applications within a 3-tier architecture (presentation, business, database), contributing to core feature development and ongoing maintenance.</li>
+          <li>Developed REST APIs and SQL components using ADO.NET and LINQ, working on stored procedures, queries, and functions.</li>
+          <li>Improved UI/UX using jQuery, AJAX, and .NET Validation Controls, building more interactive and responsive forms.</li>
           <li class="exp-highlight">🏆 Awarded Performer of the Year 2017 for outstanding contribution to application delivery and team performance.</li>
         </ul>
       </div>
@@ -443,18 +471,27 @@
   <h2>Key Projects</h2>
   <div class="projects-grid">
     <div class="project-card fade-in">
-      <span class="project-badge badge-ai">AI / Automation</span>
-      <div class="project-title">AI Document Processing Pipeline</div>
-      <p class="project-desc">Built an AI-powered pipeline using OpenAI GPT and OCR to automatically extract nationality, university, degree, grade, and pass date from documents. Integrated into Coventry University's PGR+ verification system.</p>
-      <div class="project-impact">↓ 70% reduction in manual data entry</div>
+      <span class="project-badge badge-ai">AI / Document Intelligence</span>
+      <div class="project-title">GPT-4 Vision Application Pipelines</div>
+      <p class="project-desc">Two document-reading pipelines for Coventry University's PGR+ portal: one extracts nationality from a scanned passport, the other pulls course title, dates, and grade from transcripts and certificates. Both auto-fill the application and fall back to manual entry when extraction confidence is low.</p>
+      <div class="project-impact">↓ 70% reduction in manual review for international applicants</div>
       <div class="skill-tags" style="margin-top:12px;">
-        <span class="tag">OpenAI GPT</span><span class="tag">OCR</span><span class="tag">.NET Core</span><span class="tag">Blazor</span>
+        <span class="tag">GPT-4 Vision</span><span class="tag">.NET Core</span><span class="tag">Blazor</span>
+      </div>
+    </div>
+    <div class="project-card fade-in">
+      <span class="project-badge badge-ai">AI / Social Automation</span>
+      <div class="project-title">AI Bot System &amp; My Social Posts Dashboard</div>
+      <p class="project-desc">On-demand AI bots for Predict Media's social platform, each with a DALL·E-generated profile picture matched to a chosen region. Bots post, like, comment, and repost in-character on a schedule. Operators monitor, moderate, and reply as bot profiles from a dedicated Blazor dashboard with real-time SignalR updates.</p>
+      <div class="project-impact">Autonomous, moderated content generation at scale</div>
+      <div class="skill-tags" style="margin-top:12px;">
+        <span class="tag">DALL·E</span><span class="tag">Blazor</span><span class="tag">SignalR</span><span class="tag">Next.js</span>
       </div>
     </div>
     <div class="project-card fade-in">
       <span class="project-badge badge-saas">SaaS / Platform</span>
       <div class="project-title">QR Onboarding &amp; Cabin Allocation Engine</div>
-      <p class="project-desc">Designed a QR-based onboarding system for The Simulation Centre supporting sequential, group, and instructor-led modes. Eliminated manual allocation errors entirely.</p>
+      <p class="project-desc">QR-based check-in system for The Simulation Centre supporting sequential, group, and instructor-led modes. Delegates are automatically allocated to cabins on scan, eliminating manual allocation errors entirely.</p>
       <div class="project-impact">↓ 40–60% faster participant check-in</div>
       <div class="skill-tags" style="margin-top:12px;">
         <span class="tag">Blazor</span><span class="tag">SQL Server</span><span class="tag">C#</span>
@@ -462,8 +499,8 @@
     </div>
     <div class="project-card fade-in">
       <span class="project-badge badge-migration">Migration</span>
-      <div class="project-title">Predict Media Sim — MVC to .NET Core</div>
-      <p class="project-desc">Led the phased migration from legacy ASP.NET MVC to .NET Core, embedding Blazor components into the live system. Achieved zero disruption to authentication, database, or active users.</p>
+      <div class="project-title">Predict Media — MVC to .NET Core</div>
+      <p class="project-desc">Phased migration from legacy ASP.NET MVC to .NET Core by embedding Blazor components directly into the live application. Existing database, sessions, cookies, and authentication stayed intact throughout — zero downtime, zero disruption to logged-in users.</p>
       <div class="project-impact">Zero downtime · Zero disruption</div>
       <div class="skill-tags" style="margin-top:12px;">
         <span class="tag">ASP.NET MVC</span><span class="tag">.NET Core</span><span class="tag">Blazor</span>
@@ -472,28 +509,28 @@
     <div class="project-card fade-in">
       <span class="project-badge badge-integration">Integration</span>
       <div class="project-title">Autotrader Retailer API Integration</div>
-      <p class="project-desc">Replaced legacy CSV/FTPS ingestion with a direct Autotrader Retailer API integration enabling real-time stock synchronisation across four brands: Midlands Truck &amp; Van, Bell Truck &amp; Van, Used Vans 4U, and Used Trucks 4U.</p>
+      <p class="project-desc">Replaced legacy CSV/FTPS ingestion with a token-authenticated Autotrader Retailer API integration enabling real-time stock synchronisation across four dealership brands: Midlands Truck &amp; Van, Bell Truck &amp; Van, Used Vans 4U, and Used Trucks 4U.</p>
       <div class="project-impact">Real-time sync · 4 brands supported</div>
       <div class="skill-tags" style="margin-top:12px;">
         <span class="tag">REST API</span><span class="tag">.NET Core</span><span class="tag">SQL Server</span>
       </div>
     </div>
     <div class="project-card fade-in">
-      <span class="project-badge badge-ai">AI / Messaging</span>
+      <span class="project-badge badge-integration">Prototype</span>
       <div class="project-title">SQL-Triggered WhatsApp Notifications</div>
-      <p class="project-desc">Developed a SQL-triggered WhatsApp notification workflow using Copilot Agent to detect new work packages in SQL Server and deliver instant alerts to assigned users. Fully removed manual communication steps.</p>
-      <div class="project-impact">100% manual communication eliminated</div>
+      <p class="project-desc">Proof-of-concept automated notification workflow built using GitHub Copilot agent mode. A SQL Server trigger fires on new work-package insertion, looks up the assigned user's contact details, and sends a real-time alert via the Twilio API — removing a manual communication step.</p>
+      <div class="project-impact">Manual alert step removed via Twilio API</div>
       <div class="skill-tags" style="margin-top:12px;">
-        <span class="tag">Copilot Agent</span><span class="tag">SQL Server</span><span class="tag">Event-Driven</span>
+        <span class="tag">GitHub Copilot Agent</span><span class="tag">Twilio API</span><span class="tag">SQL Server</span>
       </div>
     </div>
     <div class="project-card fade-in">
-      <span class="project-badge badge-saas">SaaS / Real-time</span>
-      <div class="project-title">My Social Posts Blazor Dashboard</div>
-      <p class="project-desc">Delivered a Blazor admin dashboard to track posts, monitor comments, and reply as operator profiles. Integrated real-time SignalR notifications from a Next.js social platform.</p>
-      <div class="project-impact">Real-time updates via SignalR</div>
+      <span class="project-badge badge-saas">Internal Tooling</span>
+      <div class="project-title">Benchmark Broker — Contract Expiry Alerts</div>
+      <p class="project-desc">Contract expiry notification system for Benchmark Broker System. An Azure-scheduled job runs daily each morning and automatically emails customers at their chosen notice period — 30, 60, or 90 days — ahead of contract expiry.</p>
+      <div class="project-impact">Automated customer notice at scale</div>
       <div class="skill-tags" style="margin-top:12px;">
-        <span class="tag">Blazor</span><span class="tag">SignalR</span><span class="tag">Next.js</span>
+        <span class="tag">Azure Scheduler</span><span class="tag">.NET Framework</span><span class="tag">SQL Server</span>
       </div>
     </div>
   </div>
@@ -508,6 +545,7 @@
       <div>
         <div class="edu-degree">MSc Computing</div>
         <div class="edu-school">Wrexham Glyndŵr University, United Kingdom</div>
+        <div class="edu-detail">Dissertation: "Comparative Analysis of ASP.NET and PHP Technologies in Web Development." Coursework included advanced data structures, network hardware &amp; software, security and risk management, and Python.</div>
       </div>
       <div class="edu-year">2022 – 2024</div>
     </div>
@@ -526,6 +564,17 @@
       <div class="edu-year">2011 – 2014</div>
     </div>
   </div>
+
+  <div class="awards-list">
+    <div class="award-item fade-in">
+      <div class="award-icon">🏆</div>
+      <div>
+        <div class="award-title">Performer of the Year (2017)</div>
+        <div class="award-org">Natrix Software Private Limited</div>
+        <div class="award-desc">Company-wide recognition for outstanding performance and contribution during the year.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -542,6 +591,9 @@
     </a>
     <a class="contact-link" href="tel:+447442089045">
       <span>📞</span> +44 7442 089045
+    </a>
+    <a class="contact-link" href="tel:+917405069086">
+      <span>📞</span> +91 7405 069086
     </a>
   </div>
 </div>
