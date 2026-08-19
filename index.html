@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suhani Patel — Software Engineer (.NET | Full‑Stack | AI Integration)</title>
+  <meta name="description" content="Suhani Patel — freelance .NET full-stack engineer (Blazor, React, GPT-4 Vision) with 7+ years delivering production SaaS platforms. UK-based, outside IR35, open to remote contract work." />
+  <meta property="og:title" content="Suhani Patel — .NET Full-Stack Engineer (AI Integration)" />
+  <meta property="og:description" content="7+ years building production SaaS platforms. GPT-4 Vision document pipelines, Blazor/React front-ends, Azure/AWS. UK-based, outside IR35, open to remote contracts." />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -140,6 +143,19 @@
       font-weight: 400; margin-bottom: 56px; color: var(--text);
     }
 
+    /* ── HOW I WORK ── */
+    .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .work-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 26px 28px;
+    }
+    .work-card-label {
+      font-family: var(--mono); font-size: 11px; color: var(--accent2);
+      letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .work-card-value { font-family: var(--serif); font-size: 1.3rem; color: var(--text); margin-bottom: 6px; }
+    .work-card-sub { color: var(--muted); font-size: 13px; line-height: 1.6; }
+
     /* ── SKILLS ── */
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .skill-card {
@@ -249,6 +265,10 @@
       transition: all .2s;
     }
     .contact-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    .contact-link.primary {
+      background: var(--accent); color: #fff; border-color: var(--accent);
+    }
+    .contact-link.primary:hover { background: #6fa3ff; color: #fff; }
 
     /* ── FOOTER ── */
     footer {
@@ -293,7 +313,7 @@
   <div class="glow"></div>
   <div class="hero-grid">
       <div>
-          <div class="hero-tag">Available for opportunities</div>
+          <div class="hero-tag">Available for contract work — Outside IR35</div>
           <h1>Suhani Patel</h1>
           <p class="hero-role">Full-Stack Engineer (.NET | AI Integration)</p>
           <p class="hero-desc">
@@ -301,7 +321,7 @@
           </p>
           <div class="hero-btns">
               <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-outline" href="mailto:suhani.patel0906@gmail.com">Get in Touch</a>
+              <a class="btn btn-outline" href="mailto:suhani.patel0906@gmail.com?subject=Contract%20enquiry">Get in Touch</a>
           </div>
       </div>
     <div class="stats-card fade-in">
@@ -322,6 +342,34 @@
     </div>
   </div>
 </div>
+
+<!-- HOW I WORK -->
+<section id="how-i-work">
+  <div class="section-label">Engagement details</div>
+  <h2>How I Work</h2>
+  <div class="work-grid">
+    <div class="work-card fade-in">
+      <div class="work-card-label">Contract Type</div>
+      <div class="work-card-value">Outside IR35</div>
+      <div class="work-card-sub">Day-rate contracts, UK-based or fully remote.</div>
+    </div>
+    <div class="work-card fade-in">
+      <div class="work-card-label">Typical Engagement</div>
+      <div class="work-card-value">3–12 months</div>
+      <div class="work-card-sub">Comfortable joining mid-project or owning a feature area from scratch.</div>
+    </div>
+    <div class="work-card fade-in">
+      <div class="work-card-label">Team Setup</div>
+      <div class="work-card-value">Lean teams</div>
+      <div class="work-card-sub">Usually 2–3 person delivery teams, owning features end-to-end with minimal oversight.</div>
+    </div>
+    <div class="work-card fade-in">
+      <div class="work-card-label">Availability</div>
+      <div class="work-card-value">Immediate</div>
+      <div class="work-card-sub">Open to new contract opportunities in the UK or remote.</div>
+    </div>
+  </div>
+</section>
 
 <!-- SKILLS -->
 <section id="skills">
@@ -581,8 +629,11 @@
 <div id="contact">
   <div class="section-label" style="justify-content:center;max-width:600px;margin:0 auto 16px;">Let's connect</div>
   <h2>Get In Touch</h2>
-  <p class="contact-sub">I'm open to new opportunities and interesting projects. Feel free to reach out!</p>
+  <p class="contact-sub">Open to new contract opportunities in the UK or remote. Get in touch to discuss a project or book a discovery call.</p>
   <div class="contact-links">
+    <a class="contact-link primary" href="mailto:suhani.patel0906@gmail.com?subject=Discovery%20call%20request">
+      <span>📅</span> Book a Call
+    </a>
     <a class="contact-link" href="mailto:suhani.patel0906@gmail.com">
       <span>✉</span> suhani.patel0906@gmail.com
     </a>
@@ -592,14 +643,11 @@
     <a class="contact-link" href="tel:+447442089045">
       <span>📞</span> +44 7442 089045
     </a>
-    <a class="contact-link" href="tel:+917405069086">
-      <span>📞</span> +91 7405 069086
-    </a>
   </div>
 </div>
 
 <footer>
-  <span>© 2026 Suhani Patel · Built with ♥ for GitHub Pages</span>
+  <span>© 2026 Suhani Patel</span>
 </footer>
 
 <script>
